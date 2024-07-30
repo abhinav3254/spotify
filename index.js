@@ -5,6 +5,9 @@ const { port } = require('./config/config');
 // multer file upload import
 const upload = require('./middlewares/upload');
 
+// db connect
+require('./config/db_config');
+
 app.get('', (req, res) => {
     return res.status(200).json({ message: 'Hola!' });
 });
